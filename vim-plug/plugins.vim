@@ -15,12 +15,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
     Plug 'joshdick/onedark.vim'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'frazrepo/vim-rainbow'
     Plug 'sonph/onehalf'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'github/copilot.vim'
 call plug#end()
+
 
 au FileType c,cpp,objc,objcpp call rainbow#load()
 let g:rainbow_active = 1
@@ -65,9 +67,9 @@ set nowritebackup
 let g:airline_powerline_fonts = 1
 set guifont=MesloLGS\NF:s12
 
-source $HOME/.config/nvim/vim-plug/settings/coc.vim
 source $HOME/.config/nvim/vim-plug/cp.vim
 source $HOME/.config/nvim/vim-plug/py.vim
+source $HOME/.config/nvim/vim-plug/coc-setting.vim
 
 let g:python3_host_prog="/usr/bin/python3"
 
